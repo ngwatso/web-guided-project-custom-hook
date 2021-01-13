@@ -1,13 +1,18 @@
 
 
-export getPokemen = () => {
+const getPokemen = () => {
     return(data);
   }
   
-export getPokemon =() => {
+const getPokemon =() => {
     return fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
         .then((res) => res.json())
         .then((data) => {
             return(data);
         });
+}
+
+export default {
+    getPokemen,
+    getPokemon
 }
