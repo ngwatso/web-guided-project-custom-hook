@@ -4,6 +4,8 @@ import TextField from "@material-ui/core/TextField";
 
 import Button from "../theme/Button";
 
+import useForm from './../hooks/useForm';
+
 const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
@@ -21,26 +23,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const useForm = (initialValues)=> {
-  const [values, setValues] = useState(initialValues);
-
-  const handleChanges = e => {
-    
-
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const clearForm = e => {
-    e.preventDefault();
-    setValues(initialValues);
-  };
-
-  return([values, handleChanges, clearForm]);
-};
-
 const initialValues = {
   firstName:"",
   email: ""
@@ -54,6 +36,8 @@ export default function SignupForm() {
     e.preventDefault();
     alert(`${values.firstName} ${values.email}`);
   };
+
+  console.log("current state: ", values);
 
   return (
     <div p={2} className="form">
