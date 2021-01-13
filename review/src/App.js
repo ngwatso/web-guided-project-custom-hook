@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./styles.scss";
 
-import { fetchAllPoke, fetchSelectedPoke} from './services/pokemonServices';
+import pokemonServices from './services/pokemonServices';
 
 import PokeList from './components/PokeList';
 import SelectedPoke from './components/SelectedPoke';
@@ -12,11 +12,11 @@ function App() {
   const [selectedPokemon, setSelectedPokemon] = useState({});
 
   useEffect(() => {
-    setPokemen(fetchAllPoke());
+    setPokemen(pokemonServices.fetchAllPoke());
   }, []);
 
   const handlePoke = (id) => {
-    fetchSelectedPoke(id).then((data) => {
+    pokemonServices.fetchSelectedPoke(id).then((data) => {
         setSelectedPokemon(data);
     });
   };
