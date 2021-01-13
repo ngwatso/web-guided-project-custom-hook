@@ -1,8 +1,10 @@
-const getPokemen = () => {
+
+
+export getPokemen = () => {
     return(data);
   }
   
-const getPokemon =() => {
+export getPokemon =() => {
     return fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
         .then((res) => res.json())
         .then((data) => {
