@@ -10,9 +10,10 @@ const usePokeState = (initialValues) => {
     }, []);
 
     const handlePoke = (id) => {
-        pokemonServices.fetchSelectedPoke(id).then((data) => {
-            setSelectedPokemon(data);
-        });
+        pokemonServices.fetchSelectedPoke(id)
+            .then((data) => {
+                setSelectedPokemon(data);
+            });
     };
 
     return([pokemen, selectedPokemon, handlePoke]);
