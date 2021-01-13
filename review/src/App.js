@@ -7,10 +7,14 @@ import PokeList from './components/PokeList';
 import SelectedPoke from './components/SelectedPoke';
 import data from "./../data";
 
-function App() {
+const usePokeState = () => {
   const [pokemen, setPokemen] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState({});
 
+}
+
+function App() {
+  
   useEffect(() => {
     setPokemen(pokemonServices.fetchAllPoke());
   }, []);
