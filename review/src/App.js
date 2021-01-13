@@ -6,8 +6,16 @@ import SelectedPoke from "./components/SelectedPoke";
 
 import data from "../data";
 
-const getPokemen = ()=>{
+const getPokemen = () => {
   return(data);
+}
+
+const getPokemon = () => {
+  fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+    .then((res) => res.json())
+    .then((data) => {
+      
+    });
 }
 
 function App() {
@@ -19,11 +27,8 @@ function App() {
   }, []);
 
   const handlePoke = (id) => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-      .then((res) => res.json())
-      .then((data) => {
-        setSelectedPokemon(data);
-      });
+    getPokemon()
+    setSelectedPokemon(data);
   };
 
   return (
