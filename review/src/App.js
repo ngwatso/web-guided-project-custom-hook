@@ -8,8 +8,8 @@ import SelectedPoke from './components/SelectedPoke';
 import data from "./../data";
 
 const usePokeState = (initialValues) => {
-  const [pokemen, setPokemen] = useState([]);
-  const [selectedPokemon, setSelectedPokemon] = useState({});
+  const [pokemen, setPokemen] = useState(initialValues.pokemen);
+  const [selectedPokemon, setSelectedPokemon] = useState(initialValues.selectedPokemon);
 
   useEffect(() => {
     setPokemen(pokemonServices.fetchAllPoke());
