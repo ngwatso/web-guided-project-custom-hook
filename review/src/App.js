@@ -14,7 +14,7 @@ const getPokemon =() => {
   return fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then((res) => res.json())
     .then((data) => {
-      
+      return(data);
     });
 }
 
@@ -28,7 +28,9 @@ function App() {
 
   const handlePoke = (id) => {
     getPokemon()
-    setSelectedPokemon(data);
+      .then(data => {
+        setSelectedPokemon(data);
+      });
   };
 
   return (
