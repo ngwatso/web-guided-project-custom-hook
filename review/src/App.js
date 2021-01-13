@@ -7,7 +7,7 @@ import PokeList from './components/PokeList';
 import SelectedPoke from './components/SelectedPoke';
 import data from "./../data";
 
-const usePokeState = () => {
+const usePokeState = (initialValues) => {
   const [pokemen, setPokemen] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState({});
 
