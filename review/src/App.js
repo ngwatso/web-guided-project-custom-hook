@@ -15,8 +15,8 @@ function App() {
   
   return (
     <div className="App">
-      <SelectedPoke selectedPokemon={selectedPokemon} />
-      <PokeList handlePoke={handlePoke} pokemen={pokemen} />
+      <SelectedPoke selectedPokemon={selectedPokemon}/>
+      <PokeList pokemen={pokemen} handlePoke={handlePoke}/>
     </div>
   );
 }
