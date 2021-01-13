@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const initialValues = {
-  firstName:"",
+  firstName: "",
   email: ""
 };
 
