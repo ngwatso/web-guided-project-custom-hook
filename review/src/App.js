@@ -11,10 +11,6 @@ const usePokeState = () => {
   const [pokemen, setPokemen] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState({});
 
-}
-
-function App() {
-  
   useEffect(() => {
     setPokemen(pokemonServices.fetchAllPoke());
   }, []);
@@ -25,6 +21,11 @@ function App() {
     });
   };
 
+}
+
+function App() {
+  
+  
   return (
     <div className="App">
       <SelectedPoke selectedPokemon={selectedPokemon} />
