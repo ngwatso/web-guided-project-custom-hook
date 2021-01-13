@@ -1,14 +1,13 @@
 import data from "./../../data";
 
 const fetchSelectedPoke = (id) => {
-  return fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+  const servicePromise =  fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then((res) => res.json())
     .then((data) => {
       return data;
-    })
-    .then(data =>{
-      console.log(data);
     });
+
+  return servicePromise;
 };
 
 const fetchAllPoke = () => {
