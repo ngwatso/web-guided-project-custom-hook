@@ -21,6 +21,7 @@ const usePokeState = () => {
     });
   };
 
+  return([pokemen, selectedPokemon, handlePoke]);
 }
 
 function App() {
