@@ -25,7 +25,7 @@ const usePokeState = () => {
 }
 
 function App() {
-  
+  const [pokemen, selectedPokemon, handlePoke] = usePokeState();
   
   return (
     <div className="App">
