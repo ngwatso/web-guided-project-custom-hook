@@ -6,18 +6,6 @@ import SelectedPoke from "./components/SelectedPoke";
 
 import data from "../data";
 
-const getPokemen = () => {
-  return(data);
-}
-
-const getPokemon =() => {
-  return fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-    .then((res) => res.json())
-    .then((data) => {
-      return(data);
-    });
-}
-
 function App() {
   const [pokemen, setPokemen] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState({});
